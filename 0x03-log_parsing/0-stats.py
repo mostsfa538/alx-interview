@@ -4,7 +4,7 @@ import re
 
 
 def check_input(line):
-    """ .... """
+    """ doc """
     regex = r'^[\S]+\s*-\s*\[\d{4}-\d\d-\d\d\s*\d\d:\d\d:\d\d\.\d{6}\]'
     regex2 = r'\s*"GET \/projects\/260 HTTP\/1\.1"\s*(\S+)\s*(\d+)$'
     match = re.match(regex + regex2, line)
@@ -18,7 +18,7 @@ def check_input(line):
 
 
 def print_data(file_size=0, data={}):
-    """ .... """
+    """ doc """
     print(f'File size: {file_size}', flush=True)
     for key in sorted(data.keys()):
         if data[key] == 0:
@@ -27,7 +27,7 @@ def print_data(file_size=0, data={}):
 
 
 def show_status():
-    """ .... """
+    """ doc """
     status_code = {
         '200': 0, '301': 0,
         '400': 0, '401': 0,
@@ -56,5 +56,5 @@ def show_status():
 
 
 if __name__ == "__main__":
-    """ main """
+    """ main function """
     show_status()
